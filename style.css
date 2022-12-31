@@ -1,11 +1,10 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
-    /* box-sizing: border-box; */
-
+    box-sizing: border-box;
 }
 
-body {
+body{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -17,33 +16,32 @@ body {
 .card {
     width: 200px;
     height: 300px;
-    background-color: #ed4848;
     position: relative;
-    cursor: pointer;
-    transition: all 0.5s;
+    background-color: #ed4848;
 }
 
-.card:hover {
-    box-shadow: inset 0 0 0 100px rgba(255, 190, 0, 0.7);
-}
-
-.card i {
+.card span {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -54px;
-    margin-top: -48px;
+    font-size: 7rem;
+    margin-top: -56px;
+    margin-left: -56px;
     color: white;
+    cursor: pointer;
 }
 
-.card i:nth-of-type(1){
+.card:hover {
+    transition: all 300ms;
+    background-color: orange;
+}
+
+.card span:nth-of-type(2){
     transform: scale(0);
 }
-
-.card:hover i:nth-of-type(1){
+.card:hover span:nth-of-type(2){
     transform: scale(1);
 }
-
-.card:hover i:nth-of-type(2){
+.card:hover span:nth-child(1){
     transform: scale(0);
 }
